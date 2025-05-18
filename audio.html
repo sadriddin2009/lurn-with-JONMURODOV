@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыка</title>
+    <style>
+        body {
+            background-color: #f0e68c; /* Зеборанг */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <H1>тугмачаро пахш кунед!</H1>
+    <audio id="music" src="Пеш_аз_хоб_омӯзед_Англисӣ_Забони_модарӣ_бо_мусиқи.mp3"></audio>
+    <button onclick="playMusic()">Гуш кардан</button>
+
+    <script>
+        function playMusic() {
+            const music = document.getElementById('music');
+            music.play();
+        }
+    </script>
+</body>
+</html>

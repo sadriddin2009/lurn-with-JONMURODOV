@@ -1,0 +1,131 @@
+
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn with me english lenguage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #fff3e0);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 100%;
+            box-sizing: border-box;
+            display: flex;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #00796b;
+        }
+        .botons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .btn {
+            background-color: #00796b;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004d40;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            color: #ecf5f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>learn with me</h1>
+        <p>вебсайти омӯзишӣ барои забони англисӣ бо забони тоҷикӣ</p>
+        <div class="buttons">
+             <button class="btn"><a href="s.html">омузиши лугат</a></button>
+            <button class="btn"><a href="audio.html">гуш кардани лугат</a></button>
+            <button class="btn"><a href="граматика.html">граматика</a></button>
+            <button class="btn" onclick="startQuiz()">Саволҳои тести</button>
+</div>
+<div>
+    <div style="border: 2px solid #00796b; border-radius: 15px; padding: 20px; background-color: #e0f7fa; max-width: 600px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <h1 style="font-size: 1.8em; color: #004d40; margin-bottom: 15px;">Омузиши забони англиси бо ман</h1>
+        <p style="font-size: 1em; line-height: 1.6; color: #333;">Мо метавонем забони англисиро бо ҳам омӯзем. Ман кӯмак мекунам, ки шумо забонро беҳтар фаҳмед.</p>
+        <p style="font-size: 1em; line-height: 1.6; color: #333;">Мо метавонем бо ҳам сӯҳбат кунем, саволҳо диҳем омӯзем.</p>
+        <p style="font-size: 1em; line-height: 1.6; color: #333;">Омузишро аз чи огоз кунем? Омузишро аз қисмати аввали вебсайт меомӯзед аз қисмати <br> 
+            <strong style="color: #00796b;">Омузиш лугат</strong>, ки дар он шумо лугатҳои навро меомӯзед ва баъд аз он <br>
+            <strong style="color: #00796b;">Гуш кардани лугат</strong>, ки дар он шумо гуш мекунед ва лугатҳоро бо роҳи осон меомӯзед <br>
+            <strong style="color: #00796b;">Граматика</strong>, ки дар он шумо граматикаро меомӯзед ва баъд аз он <br>
+            <strong style="color: #00796b;">Тест</strong>, ки дар он шумо тести 25 саволиро мегузаронед ва дониши худро месанҷед.
+        </p>
+        <p style="font-size: 1em; line-height: 1.6; color: #333;">Мо бовар дорем, ки шумо бо ман забони англисиро хуб меомӯзед.</p>
+    </div>
+</div>
+
+<script>
+    
+// Simple test system
+    const questions = [
+        {q: "What is the English word for 'мактуб'?", a: "letter"},
+        {q: "Translate: Ман китоб мехонам", a: "i read a book"},
+        {q: "What does 'apple' mean in Tajik?", a: "себ"},
+        {q: "Translate: Салом! Чӣ ҳол дорӣ?", a: "hello! how are you?"},
+        {q: "What is the verb in 'I eat rice'?", a: "eat"},
+        {q: "Translate: Китоб дар рӯи миз аст", a: "the book is on the table"},
+        {q: "What does 'goodbye' mean in Tajik?", a: "худоҳофиз"},
+        {q: "What is 'навишта' in English?", a: "written"},
+        {q: "Translate: Ман мехоҳам об бинӯшам", a: "i want to drink water"},
+        {q: "What is 'blue' in Tajik?", a: "кабуд"},
+        {q: "Translate: Вай мактуб навишт", a: "he wrote a letter"},
+        {q: "What is the plural of 'book'?", a: "books"},
+        {q: "Translate: Ман меҳмон дорам", a: "i have a guest"},
+        {q: "What is 'дӯст' in English?", a: "friend"},
+        {q: "Translate: Ман ба мактаб меравам", a: "i go to school"},
+        {q: "What is 'бародар' in English?", a: "brother"},
+        {q: "Translate: Ин китоб ман аст", a: "this is my book"},
+        {q: "What is the opposite of 'big'?", a: "small"},
+        {q: "Translate: Ман мехоҳам бозӣ кунам", a: "i want to play"},
+        {q: "What is 'хӯрок' in English?", a: "food"},
+        {q: "Translate: Ман дар хона ҳастам", a: "i am at home"},
+        {q: "What is 'чой' in English?", a: "tea"},
+        {q: "Translate: Ӯ хоб аст", a: "he is sleeping"},
+        {q: "What is 'забон' in English?", a: "language"},
+        {q: "Translate: Ман дарс мехонам", a: "i study"}
+    ];
+
+    function startQuiz() {
+        let score = 0;
+        let i = 0;
+        function ask() {
+            if (i < questions.length) {
+                const answer = prompt(questions[i].q);
+                if (answer && answer.trim().toLowerCase() === questions[i].a) {
+                    score++;
+                }
+                i++;
+                ask();
+            } else {
+                alert("Шумо ба " + score + " аз 25 савол ҷавоби дуруст додед!");
+            }
+        }
+        ask();
+    }
+</script>
+
+</body>
+</html>
